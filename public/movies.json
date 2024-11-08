@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Big Buck Bunny",
+    "description": "A large and lovable rabbit is the star of this animated film, which follows his adventures in a world filled with talking animals and other fantastical creatures.",
+    "thumbnailUrl": "https://i3.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+    "videoUrl": "/videos/big-buck-bunny.mp4",
+    "genre": "Comedy",
+    "duration": "10 minutes"
+  },
+  {
+    "title": "Sintel",
+    "description": "A young woman with a mysterious past lands in a town where a sinister force haunts the populace with the appearance of a child's mannequin.",
+    "thumbnailUrl": "https://i3.ytimg.com/vi/c2gB83g_HSc/maxresdefault.jpg",
+    "videoUrl": "/videos/sintel.mp4",
+    "genre": "Adventure",
+    "duration": "15 minutes"
+  },
+  {
+    "title": "Tears of Steel",
+    "description": "A group of soldiers fight against a giant robot in a post-apocalyptic world.",
+    "thumbnailUrl": "https://i3.ytimg.com/vi/R6MlUcmOul8/maxresdefault.jpg",
+    "videoUrl": "/videos/tears-of-steel.mp4",
+    "genre": "Action",
+    "duration": "15 minutes"
+  },
+  {
+    "title": "Elephant's Dream",
+    "description": "Two friends discover a magical world hidden beneath their own in this stop-motion animated film.",
+    "thumbnailUrl": "https://i3.ytimg.com/vi/TLkA0RELQ1g/maxresdefault.jpg",
+    "videoUrl": "/videos/elephants-dream.mp4",
+    "genre": "Adventure",
+    "duration": "10 minutes"
+  }
+]
