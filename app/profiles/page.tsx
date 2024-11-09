@@ -1,6 +1,5 @@
 import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
-import React from 'react'
 import Avatar from '../../components/Avatar'
 import { authOptions } from '../../lib/authOptions'
 
@@ -15,7 +14,7 @@ const ProfilesPage = async () => {
     <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="flex flex-col">
         <h1 className="text-3xl font-bold text-white md:text-4xl">
-          Who's watching?
+          Who&apos;s watching?
         </h1>
         <div className="mt-10 flex items-center justify-center gap-8">
           <Avatar session={session} />

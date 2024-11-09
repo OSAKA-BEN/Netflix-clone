@@ -4,6 +4,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import prismadb from '@/lib/prismadb'
 import serverAuth from '@/lib/serverAuth'
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(request: NextRequest) {
   try {
     const { currentUser } = await serverAuth()

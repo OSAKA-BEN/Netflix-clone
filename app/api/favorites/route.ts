@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server'
 import prismadb from '@/lib/prismadb'
 import serverAuth from '@/lib/serverAuth'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   try {
     const { currentUser } = await serverAuth()
@@ -18,5 +20,6 @@ export async function GET() {
     return NextResponse.json(favoriteMovies)
   } catch (error) {
     console.log(error)
+    return NextResponse.json({ error: 'An error occured' }, { status: 500 })
   }
 }
