@@ -1,7 +1,7 @@
+import { authOptions } from '@/lib/authOptions'
 import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
 import Avatar from '../../components/Avatar'
-import { authOptions } from '../../lib/authOptions'
 
 const ProfilesPage = async () => {
   const session = await getServerSession(authOptions)

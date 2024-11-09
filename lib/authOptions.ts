@@ -1,14 +1,16 @@
-import NextAuth from 'next-auth'
-import Credentials from 'next-auth/providers/credentials'
-import prismadb from './prismadb'
-// @ts-ignore
+import prismadb from '@/lib/prismadb'
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { compare } from 'bcrypt'
+import { AuthOptions } from 'next-auth'
+import Credentials from 'next-auth/providers/credentials'
 import GithubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
+if (!process.env.NEXTAUTH_SECRET) {
+  throw new Error('NEXTAUTH_SECRET must be defined')
+}
 
-export const authOptions = {
+export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
     Credentials({
@@ -60,13 +62,9 @@ export const authOptions = {
   debug: process.env.NODE_ENV === 'development',
   adapter: PrismaAdapter(prismadb),
   session: {
-    strategy: 'jwt' as const,
+    strategy: 'jwt',
   },
   jwt: {
     secret: process.env.NEXTAUTH_JWT_SECRET,
   },
 }
-
-const handler = NextAuth(authOptions)
-
-export { handler as GET, handler as POST }
